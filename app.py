@@ -78,7 +78,7 @@ def main():
             timestamp = datetime.datetime.now().strftime(f"%Y-%m-%d %H:%M:%S")
 
             # Save the user input and chatbot response to the chat_log.csv file
-            with open('chat_log.csv', 'a', newline='', encoding='utf-8') as csvfile:
+            with open('chathistory.csv', 'a', newline='', encoding='utf-8') as csvfile:
                 csv_writer = csv.writer(csvfile)
                 csv_writer.writerow([user_input_str, response, timestamp])
 
@@ -91,7 +91,7 @@ def main():
         # Display the conversation history in a collapsible expander
         st.header("Conversation History")
         # with st.beta_expander("Click to see Conversation History"):
-        with open('chat_log.csv', 'r', encoding='utf-8') as csvfile:
+        with open('chathistory.csv', 'r', encoding='utf-8') as csvfile:
             csv_reader = csv.reader(csvfile)
             next(csv_reader)  # Skip the header row
             for row in csv_reader:
