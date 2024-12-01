@@ -54,7 +54,7 @@ def main():
     choice = st.sidebar.selectbox("Menu", menu)
 
     # Home Menu
-    if choice == "Home":
+    if choice == "Main Page":
         st.write("Welcome to the chatbot. Please type a message and press Enter to start the conversation.")
 
         # Check if the chat_log.csv file exists, and if not, create it with column names
