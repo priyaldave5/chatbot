@@ -47,10 +47,10 @@ counter = 0
 
 def main():
     global counter
-    st.title("Intents of Chatbot using NLP")
+    st.title("Welcome! Here is a Chatbot created by Priyal")
 
     # Create a sidebar menu with options
-    menu = ["Home", "Conversation History", "About"]
+    menu = ["Main Page", "Conversation History", "About Me"]
     choice = st.sidebar.selectbox("Menu", menu)
 
     # Home Menu
