@@ -50,7 +50,7 @@ def main():
     st.title("Welcome! Here is a Chatbot created by Priyal")
 
     # Create a sidebar menu with options
-    menu = ["Main Page", "Conversation History", "About Me"]
+    menu = ["Main Page", "Conversation History", "About"]
     choice = st.sidebar.selectbox("Menu", menu)
 
     # Home Menu
