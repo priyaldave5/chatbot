@@ -58,8 +58,8 @@ def main():
         st.write("Welcome to the chatbot. Please type a message and press Enter to start the conversation.")
 
         # Check if the chat_log.csv file exists, and if not, create it with column names
-        if not os.path.exists('chat_log.csv'):
-            with open('chat_log.csv', 'w', newline='', encoding='utf-8') as csvfile:
+        if not os.path.exists('chathistory.csv'):
+            with open('chathistory.csv', 'w', newline='', encoding='utf-8') as csvfile:
                 csv_writer = csv.writer(csvfile)
                 csv_writer.writerow(['User Input', 'Chatbot Response', 'Timestamp'])
 
