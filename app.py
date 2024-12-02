@@ -67,8 +67,7 @@ def main():
             response = chatbot(user_input)
             st.text_area("Chatbot:", value=response, height=120, max_chars=None, key=f"chatbot_response_{counter}")
 
-            timestamp = datetime.datetime.now().strftime(f"%Y-%m-%d %H:%M:%S")
-
+          
     elif choice == "About":
         st.write("A chatbot is a computer program that simulates and processes human conversation , allowing humans to interact with digital devices as if they were communicating with a real person.")
 
