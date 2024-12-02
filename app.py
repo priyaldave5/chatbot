@@ -45,11 +45,9 @@ def main():
     global counter
     st.title("Intents of Chatbot using NLP")
 
-    # Create a sidebar menu with options
     menu = ["Home", "About"]
     choice = st.sidebar.selectbox("Menu", menu)
 
-    # Home Menu
     if choice == "Home":
         st.write("Welcome to the chatbot. Please type a message and press Enter to start the conversation.")
 
@@ -64,26 +62,15 @@ def main():
 
         if user_input:
 
-            # Convert the user input to a string
             user_input_str = str(user_input)
 
             response = chatbot(user_input)
             st.text_area("Chatbot:", value=response, height=120, max_chars=None, key=f"chatbot_response_{counter}")
 
-            # Get the current timestamp
             timestamp = datetime.datetime.now().strftime(f"%Y-%m-%d %H:%M:%S")
 
-            # Save the user input and chatbot response to the chat_log.csv file
-            with open('chat_log.csv', 'a', newline='', encoding='utf-8') as csvfile:
-                csv_writer = csv.writer(csvfile)
-                csv_writer.writerow([user_input_str, response, timestamp])
-
-            if response.lower() in ['goodbye', 'bye']:
-                st.write("Thank you for chatting with me. Have a great day!")
-                st.stop()
-
     elif choice == "About":
-        st.write("a chatbot is a computer program that simulates and processes human conversation , allowing humans to interact with digital devices as if they were communicating with a real person.")
+        st.write("A chatbot is a computer program that simulates and processes human conversation , allowing humans to interact with digital devices as if they were communicating with a real person.")
 
     
 if __name__ == '__main__':
