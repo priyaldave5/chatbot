@@ -55,7 +55,7 @@ def main():
         #os.path.exists('chathistory.csv'):
          
    # elif 
- if not   choice == "About":
+ elif   choice == "About":
         st.write("a chatbot is a computer program that simulates and processes human conversation, allowing humans to interact with digital devices as if they were communicating with a real person.")
 
     
