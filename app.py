@@ -49,13 +49,8 @@ def main():
     choice = st.sidebar.selectbox("Menu", menu)
 
     if choice == "Home":
-        st.write("Welcome to the chatbot. Please type a message and press Enter to start the conversation.")
+        st.write("Please type a message and press Enter to start the conversation.")
 
-        # Check if the chat_log.csv file exists, and if not, create it with column names
-        if not os.path.exists('chat_log.csv'):
-            with open('chat_log.csv', 'w', newline='', encoding='utf-8') as csvfile:
-                csv_writer = csv.writer(csvfile)
-                csv_writer.writerow(['User Input', 'Chatbot Response', 'Timestamp'])
 
         counter += 1
         user_input = st.text_input("You:", key=f"user_input_{counter}")
