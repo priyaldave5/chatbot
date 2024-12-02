@@ -51,11 +51,11 @@ def main():
     if choice == "Main Page":
         st.write("Welcome to the chatbot. Please type a message and press Enter to start the conversation.")
 
-        if not 
+        
         #os.path.exists('chathistory.csv'):
          
    # elif 
-    choice == "About":
+ if not   choice == "About":
         st.write("a chatbot is a computer program that simulates and processes human conversation, allowing humans to interact with digital devices as if they were communicating with a real person.")
 
     
