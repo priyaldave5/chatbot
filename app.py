@@ -53,7 +53,7 @@ def main():
 
 
       #  counter += 1
-      #  user_input = st.text_input("You:", key=f"user_input_{counter}")
+        user_input = st.text_input("You:", key=f"user_input_{counter}")
 
         if user_input:
 
