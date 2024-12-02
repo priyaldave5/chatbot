@@ -50,9 +50,7 @@ def main():
 
     if choice == "Home":
         st.write("Please type a message and press Enter to start the conversation.")
-
-
-      #  counter += 1
+        
         user_input = st.text_input("You:", key=f"user_input_{counter}")
 
         if user_input:
@@ -64,7 +62,7 @@ def main():
 
           
     elif choice == "About":
-        st.write("A chatbot is a computer program that simulates and processes human conversation , allowing humans to interact with digital devices as if they were communicating with a real person.")
+        st.write("A chatbot is a computer program that simulates and processes human conversation, allowing humans to interact with digital devices as if they were communicating with a real person.")
 
     
 if __name__ == '__main__':
