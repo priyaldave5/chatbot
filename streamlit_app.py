@@ -45,7 +45,7 @@ def main():
     global counter
     st.title("WELCOME! This is a chatbot created by Priyal")
 
-    menu = ["Home", "About"]
+    menu = ["Home", "About","Conversation History"]
     choice = st.sidebar.selectbox("Menu", menu)
 
     if choice == "Home":
@@ -59,6 +59,20 @@ def main():
 
             response = chatbot(user_input)
             st.text_area("Chatbot:", value=response, height=120, max_chars=None, key=f"chatbot_response_{counter}")
+
+        elif choice == "Conversation History":
+        # Display the conversation history in a collapsible expander
+        st.header("Conversation History")
+        # with st.beta_expander("Click to see Conversation History"):
+        with open('chat_log.csv', 'r', encoding='utf-8') as csvfile:
+            csv_reader = csv.reader(csvfile)
+            next(csv_reader)  # Skip the header row
+            for row in csv_reader:
+                st.text(f"User: {row[0]}")
+                st.text(f"Chatbot: {row[1]}")
+               # st.text(f"Timestamp: {row[2]}")
+                st.markdown("---")
+
 
           
     elif choice == "About":
