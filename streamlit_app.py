@@ -45,12 +45,12 @@ def main():
     global counter
     st.title("WELCOME! This is a chatbot created by Priyal")
 
-    menu = ["Home","About","Conversation History"]
+    menu = ["Home","About"]
     choice = st.sidebar.selectbox("Menu", menu)
 
     if choice == "Home":
         
-        st.write("Welcome to the chatbot. Please type a message and press Enter to start the conversation.")
+        st.write(" Please type a message and press Enter to start the conversation.")
     
         counter += 1
         user_input = st.text_input("You:", key=f"user_input_{counter}")
