@@ -48,24 +48,18 @@ def main():
     menu = ["Home","Conversation History","About"]
     choice = st.sidebar.selectbox("Menu", menu)
 
-    # Home Menu
     if choice == "Home":
         st.write("Welcome to the chatbot. Please type a message and press Enter to start the conversation.")
 
-    
         counter += 1
         user_input = st.text_input("You:", key=f"user_input_{counter}")
 
         if user_input:
 
-            # Convert the user input to a string
             user_input_str = str(user_input)
 
             response = chatbot(user_input)
             st.text_area("Chatbot:", value=response, height=120, max_chars=None, key=f"chatbot_response_{counter}")
-
-
-            
 
  
     elif choice == "About":
