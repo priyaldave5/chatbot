@@ -58,8 +58,14 @@ def main():
             user_input_str = str(user_input)
 
             response = chatbot(user_input)
-            st.text_area("Chatbot:", value=response, height=120, max_chars=None, key=f"chatbot_response_{counter}")
+            st.text_area("Chatbot:", value=response, height=100, max_chars=None, key=f"chatbot_response_{counter}")
+ with open('chat_log.csv', 'a', newline='', encoding='utf-8') as csvfile:
+                csv_writer = csv.writer(csvfile)
+                csv_writer.writerow([user_input_str, response, timestamp])
 
+            if response.lower() in ['goodbye', 'bye']:
+                st.write("Thank you for chatting with me. Have a great day!")
+                st.stop()
         elif choice == "Conversation History":
         # Display the conversation history in a collapsible expander
         st.header("Conversation History")
