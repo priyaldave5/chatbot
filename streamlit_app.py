@@ -45,7 +45,7 @@ def main():
     global counter
     st.title("WELCOME! This is a chatbot created by Priyal")
 
-    menu = ["Home", "About","Conversation History"]
+    menu = ["Home", "Conversation History""About"]
     choice = st.sidebar.selectbox("Menu", menu)
 
     if choice == "Home":
@@ -61,7 +61,7 @@ def main():
             st.text_area("Chatbot:", value=response, height=100, max_chars=None, key=f"chatbot_response_{counter}")
  with open('chat_log.csv', 'a', newline='', encoding='utf-8') as csvfile:
                 csv_writer = csv.writer(csvfile)
-                csv_writer.writerow([user_input_str, response, timestamp])
+                csv_writer.writerow([user_input_str, response)
 
             if response.lower() in ['goodbye', 'bye']:
                 st.write("Thank you for chatting with me. Have a great day!")
