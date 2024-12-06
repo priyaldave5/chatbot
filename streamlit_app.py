@@ -49,6 +49,7 @@ def main():
     choice = st.sidebar.selectbox("Menu", menu)
 
     if choice == "Home":
+        {
         st.write("Welcome to the chatbot. Please type a message and press Enter to start the conversation.")
 
         counter += 1
@@ -60,7 +61,9 @@ def main():
 
             response = chatbot(user_input)
             st.text_area("Chatbot:", value=response, height=120, max_chars=None, key=f"chatbot_response_{counter}")
+            }
    elif choice == "Conversation History":
+{
         # Display the conversation history in a collapsible expander
         st.header("Conversation History")
         # with st.beta_expander("Click to see Conversation History"):
@@ -70,9 +73,9 @@ def main():
             for row in csv_reader:
                 st.text(f"User: {row[0]}")
                 st.text(f"Chatbot: {row[1]}")
- 
-    elif choice == "About":
+}
+    elif choice == "About":{
         st.write("PROBLEM STATEMENT :To built a conversational chatbot that can interact with users, understand their queries and give appropriate response to them. The chatbot should be able to understand NLP, process it and deliver coherent replies using NLP techniques.A chatbot is a computer program that simulates and processes human conversation, allowing humans to interact with digital devices as if they were communicating with a real person.")
-    
+    }
 if __name__ == '__main__':
     main()
