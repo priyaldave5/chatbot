@@ -51,7 +51,7 @@ def main():
     if choice == "Home":
         st.write("Please type a message and press Enter to start the conversation.")
         
-  user_input = st.text_input("You:", key=f"user_input_{counter}")
+ # user_input = st.text_input("You:", key=f"user_input_{counter}")
 
         if user_input:
 
