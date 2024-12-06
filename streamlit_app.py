@@ -45,7 +45,7 @@ def main():
     global counter
     st.title("WELCOME! This is a chatbot created by Priyal")
 
-    menu = ["Home","Conversation History","About"]
+    menu = ["Home","About","Conversation History"]
     choice = st.sidebar.selectbox("Menu", menu)
 
     if choice == "Home":
@@ -60,7 +60,7 @@ def main():
 
             response = chatbot(user_input)
             st.text_area("Chatbot:", value=response, height=120, max_chars=None, key=f"chatbot_response_{counter}")
-       elif choice == "Conversation History":
+   elif choice == "Conversation History":
         # Display the conversation history in a collapsible expander
         st.header("Conversation History")
         # with st.beta_expander("Click to see Conversation History"):
