@@ -52,33 +52,7 @@ def main():
         st.write("Please type a message and press Enter to start the conversation.")
         
         user_input = st.text_input("You:", key=f"user_input_{counter}")
-
-        if user_input:
-
-            user_input_str = str(user_input)
-
-            response = chatbot(user_input)
-            st.text_area("Chatbot:", value=response, height=100, max_chars=None, key=f"chatbot_response_{counter}")
- with open('chat_log.csv', 'a', newline='', encoding='utf-8') as csvfile:
-                csv_writer = csv.writer(csvfile)
-                csv_writer.writerow([user_input_str, response)
-
-            if response.lower() in ['goodbye', 'bye']:
-                st.write("Thank you for chatting with me. Have a great day!")
-                st.stop()
-        elif choice == "Conversation History":
-        # Display the conversation history in a collapsible expander
-        st.header("Conversation History")
-        # with st.beta_expander("Click to see Conversation History"):
-        with open('chat_log.csv', 'r', encoding='utf-8') as csvfile:
-            csv_reader = csv.reader(csvfile)
-            next(csv_reader)  # Skip the header row
-            for row in csv_reader:
-                st.text(f"User: {row[0]}")
-                st.text(f"Chatbot: {row[1]}")
-               # st.text(f"Timestamp: {row[2]}")
-                st.markdown("---")
-
+  
 
           
     elif choice == "About":
