@@ -50,8 +50,10 @@ def main():
 
     if choice == "Home":
         st.write("Please type a message and press Enter to start the conversation.")
+        {
     counter += 1    
   user_input = st.text_input("You:", key=f"user_input_{counter}")
+
 
         if user_input:
 
@@ -59,7 +61,7 @@ def main():
             user_input_str = str(user_input)
 
             response = chatbot(user_input)
-            st.text_area("Chatbot:", value=response, height=120, max_chars=None, key=f"chatbot_response_{counter}")
+            st.text_area("Chatbot:", value=response, height=120, max_chars=None, key=f"chatbot_response_{counter}")}
 
     elif choice == "About":
         st.write("PROBLEM STATEMENT :To built a conversational chatbot that can interact with users, understand their queries and give appropriate response to them. The chatbot should be able to understand NLP, process it and deliver coherent replies using NLP techniques.A chatbot is a computer program that simulates and processes human conversation, allowing humans to interact with digital devices as if they were communicating with a real person.")
