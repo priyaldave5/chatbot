@@ -65,7 +65,9 @@ def main():
 
     elif choice == "About":
         st.write("PROBLEM STATEMENT :To built a conversational chatbot that can interact with users, understand their queries and give appropriate response to them. The chatbot should be able to understand NLP, process it and deliver coherent replies using NLP techniques.A chatbot is a computer program that simulates and processes human conversation, allowing humans to interact with digital devices as if they were communicating with a real person.")
-
+         with open('chat_log.csv', 'a', newline='', encoding='utf-8') as csvfile:
+                csv_writer = csv.writer(csvfile)
+                csv_writer.writerow([user_input_str, response, timestamp])
     elif choice == "Conversation History":
 
         # Display the conversation history in a collapsible expander
