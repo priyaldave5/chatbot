@@ -51,7 +51,11 @@ def main():
     if choice == "Home":
         st.write("Please type a message and press Enter to start the conversation.")
         
-    
+      counter += 1
+        user_input = st.text_input("You:", key=f"user_input_{counter}")
+
+        if user_input:
+
    user_input_str = str(user_input)
 
             response = chatbot(user_input)
