@@ -72,10 +72,8 @@ def main():
             # Get the current timestamp
             timestamp = datetime.datetime.now().strftime(f"%Y-%m-%d %H:%M:%S")
 
-            # Save the user input and chatbot response to the chat_log.csv file
-            with open('chat_log.csv', 'a', newline='', encoding='utf-8') as csvfile:
-                csv_writer = csv.writer(csvfile)
-                csv_writer.writerow([user_input_str, response, timestamp])
+
+            
 
             if response.lower() in ['goodbye', 'bye']:
                 st.write("Thank you for chatting with me. Have a great day!")
